@@ -23,18 +23,20 @@ p {
   font-family: "Muli", sans-serif;
   font-size: 1em; }
 
+a {
+  font-family: "Muli", sans-serif; }
+
 .welcomeMsg {
-  display: none;
-  padding: 30px 0; }
+  padding: 20px 20px 10px; }
   .welcomeMsg h1, .welcomeMsg h2 {
     text-align: center; }
   .welcomeMsg h1 {
     text-shadow: 5px 5px rgba(0, 0, 0, 0.2);
-    font-size: 4.5em;
+    font-size: 2.5em;
     color: #004d00; }
   .welcomeMsg h2 {
     font-family: "Caveat", cursive;
-    font-size: 3em;
+    font-size: 1.75em;
     color: #4da6ff; }
 
 .lgScreen {
@@ -48,8 +50,31 @@ p {
 
 #index .smallScreen div {
   background-color: rgba(30, 122, 31, 0.4);
-  margin: 6px 10px 15px;
-  padding: 5px 10px 10px; }
+  margin: 15px 20px;
+  padding: 10px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+#index .smallScreen h2 {
+  text-transform: uppercase; }
+#index .smallScreen p {
+  padding-top: 5px; }
+#index .smallScreen a {
+  width: 107px;
+  display: inline-block;
+  background-color: #004d00;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  box-shadow: 0 0 1px #000;
+  border-radius: 10px;
+  margin: 20px 0 10px; }
+  #index .smallScreen a:active {
+    box-shadow: 0 0 5px #000;
+    font-weight: 700; }
 
 #slideshow {
   position: relative; }
@@ -59,10 +84,21 @@ p {
     right: 0; }
 
 @media screen and (min-width: 645px) {
+  .welcomeMsg h1 {
+    font-size: 3.5em; }
+  .welcomeMsg h2 {
+    font-size: 2.5em; }
+
+  #indexSubSec {
+    margin: 0 10%; }
+
   #index .smallScreen {
     display: flex; }
+    #index .smallScreen div {
+      max-width: 300px;
+      margin: 6px 10px 15px; }
     #index .smallScreen img {
-      max-width: 55%;
+      width: 400px;
       margin: 6px 10px 15px; } }
 @media screen and (min-width: 1000px) {
   #indexSubSec {
@@ -72,6 +108,8 @@ p {
 
   #index article {
     align-items: center; }
+    #index article:first-child {
+      margin-top: 0; }
     #index article .smallScreen {
       display: none; }
     #index article img {
@@ -79,7 +117,11 @@ p {
       margin: 10px auto; }
 
   .welcomeMsg {
-    display: block; }
+    padding: 30px 0; }
+    .welcomeMsg h1 {
+      font-size: 4.5em; }
+    .welcomeMsg h2 {
+      font-size: 3em; }
 
   .lgScreen {
     display: block;
@@ -106,22 +148,28 @@ p {
       text-align: center;
       position: relative;
       font-size: 17px;
-      padding: 10px;
+      padding-top: 15px;
       background: rgba(0, 0, 0, 0.5);
-      margin: 20px 0 0 0; }
+      margin: 30px 0 0 0; }
     .lgScreen p {
       position: relative;
-      color: black;
+      color: #fff;
       padding: 10px 20px 20px;
-      text-align: center; }
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5); }
     .lgScreen a {
       display: inline-block;
-      background-color: #fff;
+      background-color: #004d00;
       text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
       padding: 7px 14px;
-      box-shadow: 0 0 1px #000; }
+      box-shadow: 0 0 1px #000;
+      border-radius: 10px;
+      margin: 20px; }
       .lgScreen a:hover {
-        box-shadow: 0 0 5px #000; }
+        box-shadow: 0 0 5px #000;
+        font-weight: 700; }
 
   .view-first:hover img {
     transform: scale(1.1); }
@@ -131,8 +179,6 @@ p {
   .view-first:hover h2, .view-first:hover p, .view-first:hover a {
     opacity: 1;
     transform: translateY(0px); }
-  .view-first:hover p {
-    transition-delay: 0.1s; }
   .view-first:hover a {
     transition-delay: 0.2s; }
   .view-first img {
@@ -141,9 +187,9 @@ p {
     opcaity: 0;
     transition: all 0.4s ease-in-out; }
   .view-first h2 {
-    transform: translateY(-100px);
+    transform: translateY(100px);
     opacity: 0;
-    transition: all 0.2s ease-in-out; }
+    transition: all 0.2 linear; }
   .view-first p {
     transform: translateY(100px);
     opacity: 0;
@@ -178,7 +224,8 @@ nav {
   text-transform: uppercase;
   font-size: 20px;
   background-color: #f2f2f2;
-  padding: 10px 0 10px 10px; }
+  padding: 10px 0 10px 10px;
+  border-top: solid 2px black; }
   #navMain a {
     text-decoration: none;
     color: green;
@@ -189,7 +236,7 @@ nav {
       font-weight: 700; }
 
 #mainImg {
-  width: 1300px;
+  width: 100%;
   border-top: solid 2px black;
   padding-top: 5px; }
 
@@ -242,7 +289,8 @@ footer {
     background-color: #fff;
     align-items: center;
     margin-left: 5%;
-    text-align: center; }
+    text-align: center;
+    border-top: none; }
     #navMain a:hover {
       font-weight: 700; }
 
