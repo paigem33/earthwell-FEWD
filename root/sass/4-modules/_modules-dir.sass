@@ -1,0 +1,102 @@
+//The modules folder holds all your micro layout files. Your styles for buttons and navigation and similar page components.
+
+//nav below
+nav
+    margin-bottom: 5px
+#navLogo
+    width: 100px
+    height: 100px
+#nameLogo
+    width: 200px
+    padding-bottom: 17px
+.hamburger
+    font-size: 40px
+    padding-right: 10px
+    cursor: pointer
+.navContent
+    display: flex
+    justify-content: space-between//spacing out
+    align-items: center //centering hamburger vertically
+#navMain
+    list-style-type: none
+    font-family: 'Muli', sans-serif
+    text-transform: uppercase
+    font-size: 20px
+    background-color: #f2f2f2
+    padding: 10px 0 10px 10px
+    a
+        text-decoration: none
+        color: green
+        display: block
+        padding: 10px
+        &:active
+            background-color: #fff
+            font-weight: 700
+#mainImg 
+    width: 1300px
+    border-top: solid 2px black
+    padding-top: 5px //this is okay because the actual img will span the entire page thus so will the border top
+
+//footer
+footer
+    background-color: rgba(30, 122, 31,.4)
+    text-align: center
+    position: relative
+    top: 450px
+    padding: 15px
+    ul 
+        display: inline-block
+        margin: auto
+        display: flex
+        justify-content: center
+    li 
+        list-style: none
+        a
+            background: url(../images/Social_Media_Icons_BW.png) no-repeat
+            display: block
+            height: 8px
+            width: 10px
+            padding: 10px
+            margin: 8px
+.instagram
+    background-position: 0 0
+    &:hover 
+        background-position: 0 -27px
+.facebook
+    background-position: -31px 0
+    &:hover
+        background-position: -31px -27px
+.yelp
+    background-position: -93px 0
+    &:hover
+        background-position: -93px -27px
+.googleMaps
+    background-position: -124px 0
+    &:hover
+        background-position: -124px -27px
+    
+//MEDIA QUERYS for modules
+@media screen and (min-width:1000px)
+    #navMain 
+        display: flex
+        justify-content: space-around
+        flex: 3 //geting it to take up entire top
+        background-color: #fff
+        align-items: center
+        margin-left: 5%
+        text-align: center
+        a
+            &:hover
+                font-weight: 700
+    #hamburger
+        display: none
+    nav 
+        display: flex
+    #logos
+        flex: 2 //geting it to take up entire top
+    
+    
+
+        
+        
+    

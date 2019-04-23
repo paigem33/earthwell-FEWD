@@ -1,0 +1,140 @@
+//body content styles,things other than footer and header
+
+//index.html styles
+.welcomeMsg
+    display: none
+    padding: 30px 0
+    h1, h2
+        text-align: center
+        
+    h1
+        text-shadow: 5px 5px rgba(0,0,0,.2)
+        font-size: 4.5em
+        color: #004d00
+    h2
+        font-family: 'Caveat', cursive
+        font-size: 3em
+        color: #4da6ff
+.lgScreen 
+    display: none
+#index
+    border-top: solid 2px black
+    margin-top: 2px //these styles should be on every page
+    article
+        &:first-child
+            margin-top: 10px
+        
+#index
+    .smallScreen
+        div
+            background-color: rgba(30, 122, 31,.4)
+            margin: 6px 10px 15px
+            padding: 5px 10px 10px
+#slideshow
+    position: relative
+    div
+        position: absolute
+        left: 0
+        right: 0 //needs these to be centered for some reason??
+
+//MEDIA QS
+@media screen and (min-width:645px)
+    #index
+        .smallScreen
+            display: flex
+            img
+                max-width: 55%
+                margin: 6px 10px 15px
+            
+@media screen and (min-width:1000px)
+    #indexSubSec
+        display: flex
+        justify-content: space-around
+        margin-bottom: 20px
+    #index
+        article
+            align-items: center
+            .smallScreen
+                display: none
+            img
+                max-width: 90%
+                margin: 10px auto 
+    .welcomeMsg
+        display: block
+    .lgScreen
+        display: block
+        width: 400px
+        height: 300px
+        margin: 10px
+        overflow: hidden
+        position: relative
+        text-align: center
+        curser: default
+        .mask
+            width: 400px
+            height: 300px
+            position: absolute
+            overflow: hidden
+            top: 0
+            left: 0
+        img
+            display: block
+            position: relative
+        h2
+            text-transform: uppercase
+            color: #fff
+            text-align: center
+            position: relative
+            font-size: 17px
+            padding: 10px
+            background: rgba(0,0,0,.5)
+            margin: 20px 0 0 0
+        p
+            position: relative
+            color: black
+            padding: 10px 20px 20px
+            text-align: center
+        a
+            display: inline-block
+            background-color: #fff
+            text-decoration: none
+            padding: 7px 14px
+            box-shadow: 0 0 1px #000
+            &:hover
+                box-shadow: 0 0 5px #000
+    .view-first
+        &:hover 
+            img
+                transform: scale(1.1)
+            .mask
+                opacity: 1
+                background-color: rgba(255,255,255,.5)
+            h2, p, a
+                opacity: 1
+                transform: translateY(0px)
+            p
+                transition-delay: .1s
+            a
+                transition-delay: .2s
+        
+        img
+            transition: all .2s linear
+        .mask
+            opcaity: 0
+            transition: all .4s ease-in-out
+        h2
+            transform: translateY(-100px)
+            opacity: 0
+            transition: all .2s ease-in-out
+        p
+            transform: translateY(100px)
+            opacity: 0
+            transition: all .2 linear
+        a
+            opacity: 0
+            transition: all .2s
+            ease-in-out
+                
+            
+
+            
