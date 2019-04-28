@@ -24,11 +24,38 @@ p {
   font-size: 1em; }
 
 a {
-  font-family: "Muli", sans-serif; }
+  font-family: "Muli", sans-serif;
+  width: 107px;
+  display: inline-block;
+  background-color: #004d00;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  box-shadow: 0 0 1px #000;
+  border-radius: 10px;
+  margin: 20px 0 10px; }
+  a:active {
+    box-shadow: 0 0 5px #000;
+    font-weight: 700; }
 
+@media screen and (min-width: 1000px) {
+  a {
+    display: inline-block;
+    background-color: #004d00;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 7px 14px;
+    box-shadow: 0 0 1px #000;
+    border-radius: 10px;
+    margin: 20px; }
+    a:hover {
+      box-shadow: 0 0 5px #000;
+      font-weight: 700; } }
 .welcomeMsg {
   padding: 20px 20px 10px; }
-  .welcomeMsg h1, .welcomeMsg h2 {
+  .welcomeMsg h1, .welcomeMsg h2, .welcomeMsg p {
     text-align: center; }
   .welcomeMsg h1 {
     text-shadow: 5px 5px rgba(0, 0, 0, 0.2);
@@ -38,12 +65,19 @@ a {
     font-family: "Caveat", cursive;
     font-size: 1.75em;
     color: #4da6ff; }
+  .welcomeMsg .welcomeDiv {
+    position: relative; }
+    .welcomeMsg .welcomeDiv img {
+      padding-bottom: 55px; }
+    .welcomeMsg .welcomeDiv p {
+      position: absolute;
+      top: 58%;
+      line-height: 1.5; }
 
 .lgScreen {
   display: none; }
 
 #index {
-  border-top: solid 2px black;
   margin-top: 2px; }
   #index article:first-child {
     margin-top: 10px; }
@@ -61,20 +95,6 @@ a {
   text-transform: uppercase; }
 #index .smallScreen p {
   padding-top: 5px; }
-#index .smallScreen a {
-  width: 107px;
-  display: inline-block;
-  background-color: #004d00;
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  padding: 7px 14px;
-  box-shadow: 0 0 1px #000;
-  border-radius: 10px;
-  margin: 20px 0 10px; }
-  #index .smallScreen a:active {
-    box-shadow: 0 0 5px #000;
-    font-weight: 700; }
 
 #slideshow {
   position: relative; }
@@ -83,6 +103,15 @@ a {
     left: 0;
     right: 0; }
 
+@media screen and (min-width: 460px) {
+  .welcomeDiv p {
+    font-size: 1.25em; } }
+@media screen and (min-width: 560px) {
+  .welcomeMsg .welcomeDiv img {
+    padding-bottom: 10px; }
+  .welcomeMsg .welcomeDiv p {
+    margin: 0 20px;
+    top: 68%; } }
 @media screen and (min-width: 645px) {
   .welcomeMsg h1 {
     font-size: 3.5em; }
@@ -100,7 +129,18 @@ a {
     #index .smallScreen img {
       width: 400px;
       margin: 6px 10px 15px; } }
+@media screen and (min-width: 800px) {
+  .welcomeMsg .welcomeDiv p {
+    font-size: 1.5em;
+    margin: 0 60px;
+    top: 72%; } }
 @media screen and (min-width: 1000px) {
+  .welcomeDiv p {
+    padding: 0 150px;
+    top: 450px;
+    font-size: 1.75em;
+    line-height: 24; }
+
   #indexSubSec {
     display: flex;
     justify-content: space-around;
@@ -157,19 +197,6 @@ a {
       padding: 10px 20px 20px;
       text-align: center;
       background: rgba(0, 0, 0, 0.5); }
-    .lgScreen a {
-      display: inline-block;
-      background-color: #004d00;
-      text-decoration: none;
-      color: #fff;
-      text-transform: uppercase;
-      padding: 7px 14px;
-      box-shadow: 0 0 1px #000;
-      border-radius: 10px;
-      margin: 20px; }
-      .lgScreen a:hover {
-        box-shadow: 0 0 5px #000;
-        font-weight: 700; }
 
   .view-first:hover img {
     transform: scale(1.1); }
@@ -213,19 +240,23 @@ nav {
   padding-right: 10px;
   cursor: pointer; }
 
+.fa-times {
+  font-size: 50px; }
+
 .navContent {
   display: flex;
   justify-content: space-between;
   align-items: center; }
 
 #navMain {
+  border-top: 2px solid #404040;
+  border-bottom: 2px solid #404040;
   list-style-type: none;
   font-family: "Muli", sans-serif;
   text-transform: uppercase;
   font-size: 20px;
   background-color: #f2f2f2;
-  padding: 10px 0 10px 10px;
-  border-top: solid 2px black; }
+  padding: 10px 0 10px 10px; }
   #navMain a {
     text-decoration: none;
     color: green;
@@ -237,7 +268,6 @@ nav {
 
 #mainImg {
   width: 100%;
-  border-top: solid 2px black;
   padding-top: 5px; }
 
 footer {
@@ -289,8 +319,7 @@ footer {
     background-color: #fff;
     align-items: center;
     margin-left: 5%;
-    text-align: center;
-    border-top: none; }
+    text-align: center; }
     #navMain a:hover {
       font-weight: 700; }
 
@@ -301,6 +330,10 @@ footer {
     display: flex; }
 
   #logos {
-    flex: 2; } }
+    flex: 2; }
+
+  #navMain {
+    border-top: none;
+    border-bottom: none; } }
 
 /*# sourceMappingURL=main.css.map */

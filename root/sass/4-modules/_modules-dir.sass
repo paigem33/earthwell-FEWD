@@ -13,18 +13,21 @@ nav
     font-size: 40px
     padding-right: 10px
     cursor: pointer
+.fa-times 
+    font-size: 50px
 .navContent
     display: flex
     justify-content: space-between//spacing out
     align-items: center //centering hamburger vertically
 #navMain
+    border-top: 2px solid #404040
+    border-bottom: 2px solid #404040 //yes? no?
     list-style-type: none
     font-family: 'Muli', sans-serif
     text-transform: uppercase
     font-size: 20px
     background-color: #f2f2f2
     padding: 10px 0 10px 10px
-    border-top: solid 2px black
     a
         text-decoration: none
         color: green
@@ -35,7 +38,6 @@ nav
             font-weight: 700
 #mainImg 
     width: 100%
-    border-top: solid 2px black
     padding-top: 5px //this is okay because the actual img will span the entire page thus so will the border top
 
 //footer
@@ -86,7 +88,6 @@ footer
         align-items: center
         margin-left: 5%
         text-align: center
-        border-top: none
         a
             &:hover
                 font-weight: 700
@@ -96,6 +97,9 @@ footer
         display: flex
     #logos
         flex: 2 //geting it to take up entire top
+    #navMain
+        border-top: none
+        border-bottom: none
     
     
 
