@@ -1,38 +1,44 @@
 //The base folder holds boilerplate content. It holds the styles every page of your site should receive.
 //font-family: 'Muli', sans-serif;
-h1, h2, h2
+html
+    font-size: 16px
+h1, h2, h3
     font-family: 'Muli', sans-serif
+h1
+    font-size: 2.5em
 h2
-    font-size: 25px
+    font-size: 1.75em
 p
     font-family: 'Muli', sans-serif
     font-size: 1em
-a
-    font-family: 'Muli', sans-serif
-    width: 107px
-    display: inline-block
-    background-color: rgb(0,77,0,)
-    text-decoration: none
-    color: #fff
-    text-transform: uppercase
-    padding: 7px 14px
-    box-shadow: 0 0 1px #000
-    border-radius: 10px
-    margin: 20px 0 10px
-    &:active
-        box-shadow: 0 0 5px #000
-        font-weight: 700
-@media screen and (min-width:1000px)
+main
     a
+        font-family: 'Muli', sans-serif
+        width: 107px
         display: inline-block
-        background-color: rgb(0, 77, 0,)
+        background-color: rgb(0,77,0,)
         text-decoration: none
         color: #fff
         text-transform: uppercase
         padding: 7px 14px
         box-shadow: 0 0 1px #000
         border-radius: 10px
-        margin: 20px
-        &:hover
+        margin: 20px 0 10px
+        &:active
             box-shadow: 0 0 5px #000
             font-weight: 700
+@media screen and (min-width:1000px)
+    main
+        a
+            display: inline-block
+            background-color: rgb(0, 77, 0,)
+            text-decoration: none
+            color: #fff
+            text-transform: uppercase
+            padding: 7px 14px
+            box-shadow: 0 0 1px #000
+            border-radius: 10px
+            margin: 20px
+            &:hover
+                box-shadow: 0 0 5px #000
+                font-weight: 700

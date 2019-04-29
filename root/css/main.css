@@ -13,17 +13,23 @@ main img {
 .hideIt {
   display: none; }
 
-h1, h2, h2 {
+html {
+  font-size: 16px; }
+
+h1, h2, h3 {
   font-family: "Muli", sans-serif; }
 
+h1 {
+  font-size: 2.5em; }
+
 h2 {
-  font-size: 25px; }
+  font-size: 1.75em; }
 
 p {
   font-family: "Muli", sans-serif;
   font-size: 1em; }
 
-a {
+main a {
   font-family: "Muli", sans-serif;
   width: 107px;
   display: inline-block;
@@ -35,12 +41,12 @@ a {
   box-shadow: 0 0 1px #000;
   border-radius: 10px;
   margin: 20px 0 10px; }
-  a:active {
+  main a:active {
     box-shadow: 0 0 5px #000;
     font-weight: 700; }
 
 @media screen and (min-width: 1000px) {
-  a {
+  main a {
     display: inline-block;
     background-color: #004d00;
     text-decoration: none;
@@ -50,7 +56,7 @@ a {
     box-shadow: 0 0 1px #000;
     border-radius: 10px;
     margin: 20px; }
-    a:hover {
+    main a:hover {
       box-shadow: 0 0 5px #000;
       font-weight: 700; } }
 .welcomeMsg {
@@ -59,11 +65,9 @@ a {
     text-align: center; }
   .welcomeMsg h1 {
     text-shadow: 5px 5px rgba(0, 0, 0, 0.2);
-    font-size: 2.5em;
     color: #004d00; }
   .welcomeMsg h2 {
     font-family: "Caveat", cursive;
-    font-size: 1.75em;
     color: #4da6ff; }
   .welcomeMsg .welcomeDiv {
     position: relative; }
@@ -102,6 +106,9 @@ a {
     position: absolute;
     left: 0;
     right: 0; }
+
+.refillIndex #welcomeMsg h2 {
+  color: black; }
 
 @media screen and (min-width: 460px) {
   .welcomeDiv p {
